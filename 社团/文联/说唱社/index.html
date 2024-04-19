@@ -55,7 +55,16 @@
     
     
     
-  </head>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -146,43 +155,6 @@
       <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
-    
-      <label class="md-header__button md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
-      </label>
-      <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
-      <label class="md-search__icon md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-      </label>
-      <nav class="md-search__options" aria-label="查找">
-        
-        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
-        </button>
-      </nav>
-      
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
-            正在初始化搜索引擎
-          </div>
-          <ol class="md-search-result__list" role="presentation"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
     
     
       <div class="md-header__source">
@@ -4474,16 +4446,16 @@
 
 <h2 id="_1">社团简介</h2>
 <p>本社团旨在在嘻哈文化风靡全球的今天，组织聚集重庆大学校内热爱嘻哈文化和嘻哈歌曲的同学。通过举办多种多样的嘻哈文化活动，在丰富同学们课余生活、缓解同学们的课业压力的同时，也希望能够增强同学们勇于表达自己的勇气和自信，正向宣传嘻哈文化以及它所蕴含的一种自由肆意、勇敢追求的生活态度。同时，本社团也希望为所有追寻自己嘻哈音乐创作梦想的同学构筑一个自由热情的平台，使大家能够在这里找到属于追梦路上志同道合的伙伴。<br />
-<center><img alt="pic1" src="../../../resourses/%E7%A4%BE%E5%9B%A2_%E6%96%87%E8%81%94_%E8%AF%B4%E5%94%B1%E7%A4%BE_001.jpg" /></center>  </p>
+<center><a class="glightbox" href="../../../resourses/%E7%A4%BE%E5%9B%A2_%E6%96%87%E8%81%94_%E8%AF%B4%E5%94%B1%E7%A4%BE_001.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="pic1" src="../../../resourses/%E7%A4%BE%E5%9B%A2_%E6%96%87%E8%81%94_%E8%AF%B4%E5%94%B1%E7%A4%BE_001.jpg" /></a></center>  </p>
 <h2 id="_2">部门划分</h2>
 <p>宣传部、实践部、办公室  </p>
 <h2 id="_3">社团特色活动</h2>
 <h4 id="_4">重庆大学说唱音乐节</h4>
 <p>重庆大学说唱音乐节是重庆大学学生的重要活动，旨在丰富同学课余生活、释放同学课业压力的同时，顺应嘻哈潮流、宣传嘻哈文化。在嘻哈音乐节期间将有很多说唱爱好者登台唱出属于他们自己的声音，多种风格的歌曲和歌手，使嘻哈音乐节不光成为说唱爱好者的派对，也是所有热爱生活、热爱音乐的人的狂欢。<br />
-<center><img alt="pic2" src="../../../resourses/%E7%A4%BE%E5%9B%A2_%E6%96%87%E8%81%94_%E8%AF%B4%E5%94%B1%E7%A4%BE_002.jpg" /></center>  </p>
+<center><a class="glightbox" href="../../../resourses/%E7%A4%BE%E5%9B%A2_%E6%96%87%E8%81%94_%E8%AF%B4%E5%94%B1%E7%A4%BE_002.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="pic2" src="../../../resourses/%E7%A4%BE%E5%9B%A2_%E6%96%87%E8%81%94_%E8%AF%B4%E5%94%B1%E7%A4%BE_002.jpg" /></a></center>  </p>
 <h4 id="_5">重庆大学百团纳新</h4>
 <p>重庆大学百团纳新一直是各社团宣传展示自身的重要平台，更是学生说唱社吸纳新社员的重要途径。在本次百团纳新中，说唱社设有不同社员的歌曲演唱，富有节奏感的旋律吸引许多人驻足了解。在此活动中，说唱社成员积极吸收新鲜血液，友好交流嘻哈文化，互相分享嘻哈歌曲并展示社团活动风采。<br />
-<center><img alt="pic3" src="../../../resourses/%E7%A4%BE%E5%9B%A2_%E6%96%87%E8%81%94_%E8%AF%B4%E5%94%B1%E7%A4%BE_003.jpeg" /></center>  </p>
+<center><a class="glightbox" href="../../../resourses/%E7%A4%BE%E5%9B%A2_%E6%96%87%E8%81%94_%E8%AF%B4%E5%94%B1%E7%A4%BE_003.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="pic3" src="../../../resourses/%E7%A4%BE%E5%9B%A2_%E6%96%87%E8%81%94_%E8%AF%B4%E5%94%B1%E7%A4%BE_003.jpeg" /></a></center>  </p>
 <h4 id="rwa">RWA去野音乐节</h4>
 <p>草坪音乐节是指学生说唱社系列日常活动，包括草坪音乐节和其他社团进行联动。我们已经与音乐社联动，邀请到西南大学、重庆交通大学的原创音乐人，共同举办校园巡演派对；我们也与Bbox社合作，共同演出了影展前表演。  </p>
 <h4 id="cypher">重庆大学cypher</h4>
@@ -4585,5 +4557,5 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js"></script>
       
     
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>
