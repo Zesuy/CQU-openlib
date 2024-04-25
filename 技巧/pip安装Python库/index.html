@@ -4389,55 +4389,55 @@
   <h1>pip安装Python库</h1>
 
 <h2 id="_1">前提</h2>
-<p>您可能需要额外某些库才能执行您的 Python 代码
-如果您收到报错 <code>ModuleNotFoundError: No module named '{库名}'</code>，那么您正需要额外安装该库到您的电脑上</p>
+<p>您可能需要额外某些库才能执行您的 Python 代码<br />
+如果您收到报错 <code>ModuleNotFoundError: No module named '{库名}'</code>，那么您正需要额外安装该库到您的电脑上  </p>
 <h2 id="_2">安装方法</h2>
-<p>正常的安装十分缓慢，通过换源可以极大的改善这种情况</p>
+<p>正常的安装十分缓慢，通过换源可以极大的改善这种情况  </p>
 <h4 id="_3">操作方法</h4>
 <ol>
-<li>打开命令行<ul>
-<li>如果您是 <code>Windows</code> 操作系统（除了苹果电脑的大部分都是）<ol>
-<li><code>Win+R</code> 快捷键打开 <code>运行</code> 窗口</li>
-<li>输入 <code>cmd</code> 并回车</li>
-<li>如果您看到一个黑色窗口，则打开成功，下述所有命令都将在此处执行</li>
+<li>打开命令行  <ul>
+<li>如果您是 <code>Windows</code> 操作系统（除了苹果电脑的大部分都是）  <ol>
+<li><code>Win+R</code> 快捷键打开 <code>运行</code> 窗口  </li>
+<li>输入 <code>cmd</code> 并回车  </li>
+<li>如果您看到一个黑色窗口，则打开成功，下述所有命令都将在此处执行  </li>
 </ol>
 </li>
-<li>如果您是 <code>MacOS</code> 操作系统（苹果电脑）<ol>
-<li>进入 <code>控制台</code> 打开 <code>终端</code> 应用，或 <code>commend+空格</code> 搜索 <code>终端</code> 并打开</li>
-<li>如您看到一个白色窗口，则打开成功，下述命令都将在此处执行</li>
+<li>如果您是 <code>MacOS</code> 操作系统（苹果电脑）  <ol>
+<li>进入 <code>控制台</code> 打开 <code>终端</code> 应用，或 <code>commend+空格</code> 搜索 <code>终端</code> 并打开  </li>
+<li>如您看到一个白色窗口，则打开成功，下述命令都将在此处执行  </li>
 </ol>
 </li>
 </ul>
 </li>
-<li>换源并安装<ul>
-<li>临时变更
-    如题，这种方法只能为您当次安装换源
-    输入以下指令（请替换花括号内的内容）
+<li>换源并安装  <ul>
+<li>临时变更<br />
+    如题，这种方法只能为您当次安装换源<br />
+    输入以下指令（请替换花括号内的内容）<br />
     <div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>-i<span class="w"> </span><span class="o">{</span>镜像站<span class="o">}</span><span class="w"> </span><span class="o">{</span>库名<span class="o">}</span>
 </code></pre></div>
-    <code>{镜像站}</code> 请参考下面的链接并自行选用，<code>{库名}</code> 为您想要安装的库</li>
-<li>永久变更
-    输入
+    <code>{镜像站}</code> 请参考下面的链接并自行选用，<code>{库名}</code> 为您想要安装的库  </li>
+<li>永久变更<br />
+    输入<br />
     <div class="highlight"><pre><span></span><code>pip<span class="w"> </span>config<span class="w"> </span><span class="nb">set</span><span class="w"> </span>global.index-url<span class="w"> </span><span class="o">{</span>镜像站<span class="o">}</span>
 </code></pre></div>
-    <code>{镜像站}</code> 请参考下面的链接并自行选用
-    等待执行完成后输入
+    <code>{镜像站}</code> 请参考下面的链接并自行选用<br />
+    等待执行完成后输入<br />
     <div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span><span class="o">{</span>库名<span class="o">}</span>
 </code></pre></div>
-    <code>{库名}</code> 为您想要安装的库</li>
+    <code>{库名}</code> 为您想要安装的库  </li>
 </ul>
 </li>
 </ol>
 <h2 id="_4">镜像站</h2>
 <ul>
-<li>普遍较为好用<ul>
-<li>清华大学：<code>https://pypi.tuna.tsinghua.edu.cn/simple</code></li>
-<li>阿里云：<code>http://mirrors.aliyun.com/pypi/simple</code></li>
-<li>豆瓣：<code>http://pypi.douban.com/simple</code></li>
+<li>普遍较为好用  <ul>
+<li>清华大学：<code>https://pypi.tuna.tsinghua.edu.cn/simple</code>  </li>
+<li>阿里云：<code>http://mirrors.aliyun.com/pypi/simple</code>  </li>
+<li>豆瓣：<code>http://pypi.douban.com/simple</code>  </li>
 </ul>
 </li>
-<li>如果您使用重庆大学电信校园网可以考虑<ul>
-<li>重庆大学：<code>https://mirrors.cqu.edu.cn/pypi/web/simple</code></li>
+<li>如果您使用重庆大学电信校园网可以考虑  <ul>
+<li>重庆大学：<code>https://mirrors.cqu.edu.cn/pypi/web/simple</code>  </li>
 </ul>
 </li>
 </ul>
