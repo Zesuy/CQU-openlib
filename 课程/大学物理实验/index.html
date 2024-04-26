@@ -4403,14 +4403,14 @@
 （如使用代码，您可能需要<a href="../../%E6%8A%80%E5%B7%A7/pip%E5%AE%89%E8%A3%85Python%E5%BA%93/">pip安装Python库</a>）  </p>
 <h2 id="_2">资源</h2>
 <ul>
-<li><a href="https://lz.qaiu.top/parser?url=https://cqu-openlib.lanzouh.com/iEUgH1upckdc">教材</a>  </li>
-<li><a href="https://lz.qaiu.top/parser?url=https://cqu-openlib.lanzout.com/iu8Hp1vpxg0h">空白实验报告</a>  </li>
-<li><a href="https://lz.qaiu.top/parser?url=https://cqu-openlib.lanzouh.com/ii9sc1upch5g">实验报告参考合集</a> @ 随光  <ul>
-<li><a href="https://lz.qaiu.top/parser?url=https://cqu-openlib.lanzouh.com/ihU0m1upcpba">测量误差、不确定度和数据处理</a>  </li>
-<li><a href="https://lz.qaiu.top/parser?url=https://cqu-openlib.lanzouh.com/i7D9z1upcp6f">等厚干涉-劈尖和牛顿环</a>  </li>
-<li><a href="https://lz.qaiu.top/parser?url=https://cqu-openlib.lanzouh.com/i5hfu1upcpaj">电子示波器的使用</a>  </li>
-<li><a href="https://lz.qaiu.top/parser?url=https://cqu-openlib.lanzouh.com/it3Da1upcpod">分光计的调整与玻璃三棱镜折射率的测量</a>  </li>
-<li><a href="https://lz.qaiu.top/parser?url=https://cqu-openlib.lanzouh.com/i8MpE1upcpih">弗兰克-赫兹实验</a>  </li>
+<li><a href="https://lz.qaiu.top/parser?url=https://cqu-openlib.lanzout.com/iRffl1wkojsf">教材</a>  </li>
+<li><a href="https://lz.qaiu.top/parser?url=https://cqu-openlib.lanzout.com/igRCk1wkojwj">空白实验报告</a>  </li>
+<li><a href="https://lz.qaiu.top/parser?url=https://cqu-openlib.lanzout.com/iRloP1wko80b">实验报告参考合集</a> @ 随光  <ul>
+<li><a href="https://lz.qaiu.top/parser?url=https://cqu-openlib.lanzout.com/iRPVK1wkotkh">测量误差、不确定度和数据处理</a>  </li>
+<li><a href="https://lz.qaiu.top/parser?url=https://cqu-openlib.lanzout.com/iCpPG1wkou2f">等厚干涉-劈尖和牛顿环</a>  </li>
+<li><a href="https://lz.qaiu.top/parser?url=https://cqu-openlib.lanzout.com/ix0EG1wkotna">电子示波器的使用</a>  </li>
+<li><a href="https://lz.qaiu.top/parser?url=https://cqu-openlib.lanzout.com/irqjf1wkosri">分光计的调整与玻璃三棱镜折射率的测量</a>  </li>
+<li><a href="https://lz.qaiu.top/parser?url=https://cqu-openlib.lanzout.com/ibbeS1wkot7e">弗兰克-赫兹实验</a>  </li>
 </ul>
 <details class="info">
 <summary>数据处理代码</summary>
@@ -4448,8 +4448,8 @@
             <span class="n">color</span><span class="o">=</span><span class="s2">&quot;gray&quot;</span><span class="p">)</span>  <span class="c1"># 拟合曲线</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">85</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mf">4.9</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;$V_{</span><span class="se">\\</span><span class="s2">mathrm</span><span class="si">{G2K}</span><span class="s2">}$&quot;</span><span class="p">)</span>  <span class="c1"># x 名称</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;$I_{</span><span class="se">\\</span><span class="s2">mathrm</span><span class="si">{p}</span><span class="s2">}$&quot;</span><span class="p">)</span>  <span class="c1"># y 名称</span>
+    <span class="n">ax1</span><span class="o">.</span><span class="n">axis</span><span class="p">[</span><span class="s2">&quot;x&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">set_lable</span><span class="p">(</span><span class="s2">&quot;$V_{</span><span class="se">\\</span><span class="s2">mathrm</span><span class="si">{G2K}</span><span class="s2">}$&quot;</span><span class="p">)</span>  <span class="c1"># x 名称</span>
+    <span class="n">ax1</span><span class="o">.</span><span class="n">axis</span><span class="p">[</span><span class="s2">&quot;y&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">set_lable</span><span class="p">(</span><span class="s2">&quot;$I_{</span><span class="se">\\</span><span class="s2">mathrm</span><span class="si">{p}</span><span class="s2">}$&quot;</span><span class="p">)</span>  <span class="c1"># y 名称</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">vlines</span><span class="p">(</span><span class="mi">27</span><span class="p">,</span><span class="mf">2.423</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">vlines</span><span class="p">(</span><span class="mf">38.5</span><span class="p">,</span><span class="mf">3.288</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;$I_{</span><span class="se">\\</span><span class="s2">mathrm</span><span class="si">{p}</span><span class="s2">}-V_{</span><span class="se">\\</span><span class="s2">mathrm</span><span class="si">{G2K}</span><span class="s2">}$ curve&quot;</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="s2">&quot;center&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">=-</span><span class="mf">0.13</span><span class="p">)</span>
@@ -4487,17 +4487,17 @@
 </code></pre></div>
 </details>
 <ul>
-<li><a href="https://lz.qaiu.top/parser?url=https://cqu-openlib.lanzouh.com/ihAyb1upcprg">光电效应法测普朗克常量</a>  </li>
-<li><a href="https://lz.qaiu.top/parser?url=https://cqu-openlib.lanzouh.com/ikYOE1upcoxg">霍尔效应及螺线管内磁场分布的测量</a>  </li>
-<li><a href="https://lz.qaiu.top/parser?url=https://cqu-openlib.lanzouh.com/ivnBK1upcp2b">迈克尔逊干涉仪</a>  </li>
-<li><a href="https://lz.qaiu.top/parser?url=https://cqu-openlib.lanzouh.com/ikcgb1upcpkj">密立根油滴法测定基本电荷</a>  </li>
-<li><a href="https://lz.qaiu.top/parser?url=https://cqu-openlib.lanzouh.com/iDmGR1upcpva">三用电表的设计、制作与校正</a>  </li>
-<li><a href="https://lz.qaiu.top/parser?url=https://cqu-openlib.lanzouh.com/iUHiD1upcpnc">声光衍射与液体中声速的测定</a>  </li>
-<li><a href="https://lz.qaiu.top/parser?url=https://cqu-openlib.lanzouh.com/iDhZP1upcpti">使用应变片设计制作电子秤</a>  </li>
-<li><a href="https://lz.qaiu.top/parser?url=https://cqu-openlib.lanzouh.com/idLIK1upcp0j">铁磁材料磁化曲线和磁滞回线的测绘</a>  </li>
-<li><a href="https://lz.qaiu.top/parser?url=https://cqu-openlib.lanzouh.com/ig40M1upcpfe">显微镜、望远镜的设计与组装</a>  </li>
-<li><a href="https://lz.qaiu.top/parser?url=https://cqu-openlib.lanzouh.com/i0yt81upcpdc">杨氏弹性模量的测量</a>  </li>
-<li><a href="https://lz.qaiu.top/parser?url=https://cqu-openlib.lanzouh.com/iTiDp1upcp8h">直流电桥测电阻温度系数</a>  </li>
+<li><a href="https://lz.qaiu.top/parser?url=https://cqu-openlib.lanzout.com/iRn4J1wkosmd">光电效应法测普朗克常量</a>  </li>
+<li><a href="https://lz.qaiu.top/parser?url=https://cqu-openlib.lanzout.com/iNFlS1wkoung">霍尔效应及螺线管内磁场分布的测量</a>  </li>
+<li><a href="https://lz.qaiu.top/parser?url=https://cqu-openlib.lanzout.com/idj5h1wkou9c">迈克尔逊干涉仪</a>  </li>
+<li><a href="https://lz.qaiu.top/parser?url=https://cqu-openlib.lanzout.com/iuhPZ1wkot1i">密立根油滴法测定基本电荷</a>  </li>
+<li><a href="https://lz.qaiu.top/parser?url=https://cqu-openlib.lanzout.com/iYxlz1wkos8j">三用电表的设计、制作与校正</a>  </li>
+<li><a href="https://lz.qaiu.top/parser?url=https://cqu-openlib.lanzout.com/iA0OX1wkoswd">声光衍射与液体中声速的测定</a>  </li>
+<li><a href="https://lz.qaiu.top/parser?url=https://cqu-openlib.lanzout.com/iWV101wkosef">使用应变片设计制作电子秤</a>  </li>
+<li><a href="https://lz.qaiu.top/parser?url=https://cqu-openlib.lanzout.com/iNGbV1wkoujc">铁磁材料磁化曲线和磁滞回线的测绘</a>  </li>
+<li><a href="https://lz.qaiu.top/parser?url=https://cqu-openlib.lanzout.com/iFkK31wkotda">显微镜、望远镜的设计与组装</a>  </li>
+<li><a href="https://lz.qaiu.top/parser?url=https://cqu-openlib.lanzout.com/iNuCU1wkothe">杨氏弹性模量的测量</a>  </li>
+<li><a href="https://lz.qaiu.top/parser?url=https://cqu-openlib.lanzout.com/iwiyd1wkotvi">直流电桥测电阻温度系数</a>  </li>
 </ul>
 </li>
 </ul>
