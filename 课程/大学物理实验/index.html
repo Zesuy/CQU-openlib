@@ -4921,13 +4921,12 @@
 <li><a href="https://api.ecylt.top/v1/lanzou_link?url=https://cqu-openlib.lanzout.com/irqjf1wkosri&amp;type=down">分光计的调整与玻璃三棱镜折射率的测量</a>  </li>
 <li><a href="https://api.ecylt.top/v1/lanzou_link?url=https://cqu-openlib.lanzout.com/ibbeS1wkot7e&amp;type=down">弗兰克-赫兹实验</a>  </li>
 </ul>
-<details class="info">
+<details class="example">
 <summary>数据处理代码</summary>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">mpl_toolkits.axisartist</span> <span class="k">as</span> <span class="nn">axisartist</span>
 <span class="kn">import</span> <span class="nn">splines</span>
-
 
 <span class="k">def</span> <span class="nf">main</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">dataList</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">dotsPerSecond</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">300</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
@@ -4973,7 +4972,6 @@
                 <span class="s1">&#39;pad&#39;</span><span class="p">:</span> <span class="mi">1</span>
             <span class="p">})</span>  <span class="c1"># Delta V 文字</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-
 
 <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
     <span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="mi">20</span><span class="o">+</span><span class="p">[</span><span class="mf">0.019</span><span class="p">,</span><span class="mf">0.092</span><span class="p">,</span><span class="mf">0.195</span><span class="p">,</span><span class="mf">0.314</span><span class="p">,</span><span class="mf">0.433</span><span class="p">,</span><span class="mf">0.547</span><span class="p">,</span><span class="mf">0.651</span><span class="p">,</span><span class="mf">0.749</span><span class="p">,</span><span class="mf">0.905</span><span class="p">,</span><span class="mf">0.973</span><span class="p">,</span>
