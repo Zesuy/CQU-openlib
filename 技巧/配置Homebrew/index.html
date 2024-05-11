@@ -83,6 +83,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#0" class="md-skip">
+          跳转至
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -3684,6 +3689,17 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    配置Homebrew
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -3693,6 +3709,59 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#0" class="md-nav__link">
+    <span class="md-ellipsis">
+      0. 前情提要
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. 准备措施
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. 安装
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. 添加环境变量
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -4866,6 +4935,50 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#0" class="md-nav__link">
+    <span class="md-ellipsis">
+      0. 前情提要
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. 准备措施
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. 安装
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. 添加环境变量
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -4884,7 +4997,53 @@
 
   <h1>配置Homebrew</h1>
 
-<p>摆，一会再写。</p>
+<h2 id="0">0. 前情提要</h2>
+<ul>
+<li>本页面适用于 <code>MacOS</code> 和 <code>Linux</code> 用户，请甄别您的系统类型  </li>
+<li>本页面使用 <code>清华大学开源软件站</code> 驱动，您可自行更换软件源  </li>
+<li>本页的所有命令均在 <code>终端</code> 内运行  <ul>
+<li>如果您是 <code>MacOS</code> 操作系统（苹果电脑）用户  <ol>
+<li>进入 <code>控制台</code> 打开 <code>终端</code> 应用，或 <span class="keys"><kbd class="key-command">Cmd</kbd><span>+</span><kbd class="key-space">Space</kbd></span> 搜索 <code>终端</code> 并打开  </li>
+<li>如您看到一个白色窗口，则打开成功，下述命令都将在此处执行  </li>
+<li>请使用指令 <code>uname -m</code> 来获取您的 <code>系统架构</code>  </li>
+</ol>
+</li>
+<li>如果您是 <code>Linux</code> 操作系统用户，请在应用菜单界面找到 <code>终端</code> 等字样的应用程序，下述命令都将在此处执行  </li>
+</ul>
+</li>
+</ul>
+<h2 id="1">1. 准备措施</h2>
+<p>对于 <code>MacOS</code> 用户，您需要额外输入命令执行此步骤，<code>Linux</code> 用户可以跳过<br />
+<div class="highlight"><pre><span></span><code>xcode-select<span class="w"> </span>--install
+</code></pre></div>
+完成后输入指令<br />
+<div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">HOMEBREW_INSTALL_FROM_API</span><span class="o">=</span><span class="m">1</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">HOMEBREW_API_DOMAIN</span><span class="o">=</span><span class="s2">&quot;https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles/api&quot;</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">HOMEBREW_BOTTLE_DOMAIN</span><span class="o">=</span><span class="s2">&quot;https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles&quot;</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">HOMEBREW_BREW_GIT_REMOTE</span><span class="o">=</span><span class="s2">&quot;https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git&quot;</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">HOMEBREW_CORE_GIT_REMOTE</span><span class="o">=</span><span class="s2">&quot;https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git&quot;</span>
+</code></pre></div></p>
+<h2 id="2">2. 安装</h2>
+<p>请执行如下指令<br />
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>--depth<span class="o">=</span><span class="m">1</span><span class="w"> </span>https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/install.git<span class="w"> </span>brew-install
+/bin/bash<span class="w"> </span>brew-install/install.sh
+rm<span class="w"> </span>-rf<span class="w"> </span>brew-install
+</code></pre></div></p>
+<h2 id="3">3. 添加环境变量</h2>
+<ul>
+<li>如果您是 <code>MacOS</code> 用户且 <code>系统架构</code> 是 <code>arm64</code>，请执行如下指令<br />
+    <div class="highlight"><pre><span></span><code><span class="nb">test</span><span class="w"> </span>-r<span class="w"> </span>~/.bash_profile<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;eval &quot;$(/opt/homebrew/bin/brew shellenv)&quot;&#39;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.bash_profile
+<span class="nb">test</span><span class="w"> </span>-r<span class="w"> </span>~/.zprofile<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;eval &quot;$(/opt/homebrew/bin/brew shellenv)&quot;&#39;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.zprofile
+</code></pre></div></li>
+<li>如果您是 <code>MacOS</code> 用户且 <code>系统架构</code> 是 <code>x86_64</code>，您可以跳过此步骤  </li>
+<li>如果您是 <code>Linux</code> 用户，请执行如下指令<br />
+    <div class="highlight"><pre><span></span><code><span class="nb">test</span><span class="w"> </span>-d<span class="w"> </span>~/.linuxbrew<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">eval</span><span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>~/.linuxbrew/bin/brew<span class="w"> </span>shellenv<span class="k">)</span><span class="s2">&quot;</span>
+<span class="nb">test</span><span class="w"> </span>-d<span class="w"> </span>/home/linuxbrew/.linuxbrew<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">eval</span><span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>/home/linuxbrew/.linuxbrew/bin/brew<span class="w"> </span>shellenv<span class="k">)</span><span class="s2">&quot;</span>
+<span class="nb">test</span><span class="w"> </span>-r<span class="w"> </span>~/.bash_profile<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;eval \&quot;\$(</span><span class="k">$(</span>brew<span class="w"> </span>--prefix<span class="k">)</span><span class="s2">/bin/brew shellenv)\&quot;&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.bash_profile
+<span class="nb">test</span><span class="w"> </span>-r<span class="w"> </span>~/.profile<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;eval \&quot;\$(</span><span class="k">$(</span>brew<span class="w"> </span>--prefix<span class="k">)</span><span class="s2">/bin/brew shellenv)\&quot;&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.profile
+<span class="nb">test</span><span class="w"> </span>-r<span class="w"> </span>~/.zprofile<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;eval \&quot;\$(</span><span class="k">$(</span>brew<span class="w"> </span>--prefix<span class="k">)</span><span class="s2">/bin/brew shellenv)\&quot;&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.zprofile
+</code></pre></div></li>
+</ul>
 
 
 
