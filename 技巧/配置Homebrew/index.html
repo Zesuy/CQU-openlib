@@ -3793,6 +3793,24 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. 常用指令
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. 全部指令
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -5041,6 +5059,24 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. 常用指令
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. 全部指令
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -5063,16 +5099,15 @@
 
 <h2 id="0">0. 前情提要</h2>
 <ul>
+<li>类似 <code>{xxx}</code> 大括号内不以叹号 <code>!</code> 开头的是每个人不同的，您需要根据您的情况进行修改  </li>
+<li>类似 <code>{!xxx}</code> 大括号内以叹号 <code>!</code> 开头的是每个人不同的，但是无需修改，您只需要执行描述的操作即可  </li>
 <li>本页面适用于 <code>MacOS</code> 和 <code>Linux</code> 用户，请甄别您的系统类型  </li>
 <li>本页面使用 <code>清华大学开源软件站</code> 驱动，您可自行更换软件源  </li>
-<li>本页的所有命令均在 <code>终端</code> 内运行  <ul>
+<li>本页教程需要您熟知基本的<a href="../%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%9F%BA%E7%A1%80/">命令行</a>，请提前熟知  <ul>
 <li>如果您是 <code>MacOS</code> 操作系统（苹果电脑）用户  <ol>
-<li>进入 <code>控制台</code> 打开 <code>终端</code> 应用，或 <span class="keys"><kbd class="key-command">Cmd</kbd><span>+</span><kbd class="key-space">Space</kbd></span> 搜索 <code>终端</code> 并打开  </li>
-<li>如您看到一个白色窗口，则打开成功，下述命令都将在此处执行  </li>
 <li>请使用指令 <code>uname -m</code> 来获取您的 <code>系统架构</code>  </li>
 </ol>
 </li>
-<li>如果您是 <code>Linux</code> 操作系统用户，请在应用菜单界面找到 <code>终端</code> 等字样的应用程序，下述命令都将在此处执行  </li>
 </ul>
 </li>
 </ul>
@@ -5089,18 +5124,22 @@
 <span class="nb">export</span><span class="w"> </span><span class="nv">HOMEBREW_CORE_GIT_REMOTE</span><span class="o">=</span><span class="s2">&quot;https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git&quot;</span>
 </code></pre></div>
 <h2 id="3">3. 安装</h2>
-<p>请执行如下指令  </p>
+<p>请执行如下指令<br />
 <div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>--depth<span class="o">=</span><span class="m">1</span><span class="w"> </span>https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/install.git<span class="w"> </span>brew-install
 /bin/bash<span class="w"> </span>brew-install/install.sh
 rm<span class="w"> </span>-rf<span class="w"> </span>brew-install
-</code></pre></div>
+</code></pre></div></p>
 <h2 id="4">4. 添加环境变量</h2>
 <ul>
-<li>如果您是 <code>MacOS</code> 用户且 <code>系统架构</code> 是 <code>arm64</code>，请执行如下指令<br />
+<li>如果您是 <code>MacOS</code> 用户<ul>
+<li>请使用指令 <code>uname -m</code> 来获取您的 <code>系统架构</code>  </li>
+<li>如果您的 <code>系统架构</code> 是 <code>arm64</code>，请执行如下指令<br />
     <div class="highlight"><pre><span></span><code><span class="nb">test</span><span class="w"> </span>-r<span class="w"> </span>~/.bash_profile<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;eval &quot;$(/opt/homebrew/bin/brew shellenv)&quot;&#39;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.bash_profile
 <span class="nb">test</span><span class="w"> </span>-r<span class="w"> </span>~/.zprofile<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;eval &quot;$(/opt/homebrew/bin/brew shellenv)&quot;&#39;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.zprofile
 </code></pre></div></li>
-<li>如果您是 <code>MacOS</code> 用户且 <code>系统架构</code> 是 <code>x86_64</code>，您可以跳过此步骤  </li>
+<li>如果您的 <code>系统架构</code> 是 <code>x86_64</code>，您可以跳过此步骤  </li>
+</ul>
+</li>
 <li>如果您是 <code>Linux</code> 用户，请执行如下指令<br />
     <div class="highlight"><pre><span></span><code><span class="nb">test</span><span class="w"> </span>-d<span class="w"> </span>~/.linuxbrew<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">eval</span><span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>~/.linuxbrew/bin/brew<span class="w"> </span>shellenv<span class="k">)</span><span class="s2">&quot;</span>
 <span class="nb">test</span><span class="w"> </span>-d<span class="w"> </span>/home/linuxbrew/.linuxbrew<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">eval</span><span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>/home/linuxbrew/.linuxbrew/bin/brew<span class="w"> </span>shellenv<span class="k">)</span><span class="s2">&quot;</span>
@@ -5109,6 +5148,53 @@ rm<span class="w"> </span>-rf<span class="w"> </span>brew-install
 <span class="nb">test</span><span class="w"> </span>-r<span class="w"> </span>~/.zprofile<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;eval \&quot;\$(</span><span class="k">$(</span>brew<span class="w"> </span>--prefix<span class="k">)</span><span class="s2">/bin/brew shellenv)\&quot;&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.zprofile
 </code></pre></div></li>
 </ul>
+<h2 id="5">5. 常用指令</h2>
+<ul>
+<li><code>brew help</code> 查看有哪些指令可以使用  </li>
+<li><code>brew search {app}</code>：查找软件 <code>{app}</code>  </li>
+<li><code>brew install mongodb</code>：安裝软件 <code>{app}</code>  </li>
+<li><code>brew info {app}</code>：查看已安裝软件 <code>{app}</code> 的信息  </li>
+<li><code>brew uninstall mongodb</code>：卸载软件 <code>{app}</code>  </li>
+<li><code>brew list</code>：列出目前已安裝的软件  </li>
+<li><code>brew outdated</code>：查询有哪些软件版本已经过期  </li>
+<li><code>brew cleanup -n</code>：刪除旧版本软件  <ul>
+<li>默认的情況下，Homebrew 不会删除旧版本的软件，但是这样会导致电脑上存在过多的无用历史版本，建议使用cleanup定期清除（-n 是显示删除过程）  </li>
+</ul>
+</li>
+<li><code>brew upgrade {app}</code>：更新软件 <code>{app}</code>  </li>
+<li><code>brew update &amp;&amp; brew upgrade &amp;&amp; brew doctor</code>：更新所有软件  </li>
+</ul>
+<h2 id="6">6. 全部指令</h2>
+<p>根据 homebrew 官方提示，所有功能如下<br />
+<div class="highlight"><pre><span></span><code>==&gt; Built-in commands
+--cache          casks            docs             leaves           pin              tap-info         upgrade
+--caskroom       cleanup          doctor           link             postinstall      tap              uses
+--cellar         command          fetch            list             pyenv-sync       uninstall        vendor-install
+--env            commands         formulae         log              rbenv-sync       unlink
+--prefix         completions      gist-logs        migrate          readall          unpin
+--repository     config           help             missing          reinstall        untap
+--version        deps             home             nodenv-sync      search           update-report
+analytics        desc             info             options          setup-ruby       update-reset
+autoremove       developer        install          outdated         shellenv         update
+
+==&gt; Built-in developer commands
+audit                         edit                          pr-pull                       typecheck
+bottle                        extract                       pr-upload                     unbottled
+bump-cask-pr                  formula                       prof                          unpack
+bump-formula-pr               generate-cask-api             release                       update-license-data
+bump-revision                 generate-formula-api          rubocop                       update-maintainers
+bump-unversioned-casks        generate-man-completions      ruby                          update-python-resources
+bump                          install-bundler-gems          rubydoc                       update-sponsors
+cat                           irb                           sh                            update-test
+contributions                 linkage                       style                         vendor-gems
+create                        livecheck                     tap-new
+determine-test-runners        pr-automerge                  test
+dispatch-build-bottle         pr-publish                    tests
+
+==&gt; External commands
+services
+</code></pre></div>
+您可以使用 <code>brew help {command}</code> 指令来获取 <code>{command}</code> 的用法信息  </p>
 
 
 
