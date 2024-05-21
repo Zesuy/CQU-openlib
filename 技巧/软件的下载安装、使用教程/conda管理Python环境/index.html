@@ -3617,11 +3617,35 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#6" class="md-nav__link">
+  <a href="#3" class="md-nav__link">
     <span class="md-ellipsis">
-      6. 全部指令
+      3. 常用指令
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="3. 常用指令">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      环境管理
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      库管理
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -5213,11 +5237,35 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#6" class="md-nav__link">
+  <a href="#3" class="md-nav__link">
     <span class="md-ellipsis">
-      6. 全部指令
+      3. 常用指令
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="3. 常用指令">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      环境管理
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      库管理
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -5273,54 +5321,41 @@ conda<span class="w"> </span>config<span class="w"> </span>--add<span class="w">
 conda<span class="w"> </span>config<span class="w"> </span>--set<span class="w"> </span>show_channel_urls<span class="w"> </span>yes
 </code></pre></div>
 （本教程默认使用清华源，您可以使用其他镜像源，这里不做教程，请自行适配）  </p>
-<h2 id="6">6. 全部指令</h2>
-<p>根据 homebrew 官方提示，所有功能如下<br />
-<div class="highlight"><pre><span></span><code>==&gt; Built-in commands
---cache           deps              log               tap-info
---caskroom        desc              migrate           tap
---cellar          developer         missing           uninstall
---env             docs              nodenv-sync       unlink
---prefix          doctor            options           unpin
---repository      fetch             outdated          untap
---version         formulae          pin               update-report
-analytics         gist-logs         postinstall       update-reset
-autoremove        help              pyenv-sync        update
-casks             home              rbenv-sync        upgrade
-cleanup           info              readall           uses
-command           install           reinstall         vendor-install
-commands          leaves            search
-completions       link              setup-ruby
-config            list              shellenv
-
-==&gt; Built-in developer commands
-audit                               pr-publish
-bottle                              pr-pull
-bump-cask-pr                        pr-upload
-bump-formula-pr                     prof
-bump-revision                       release
-bump-unversioned-casks              rubocop
-bump                                ruby
-cat                                 rubydoc
-contributions                       sh
-create                              style
-determine-test-runners              tap-new
-dispatch-build-bottle               test
-edit                                tests
-extract                             typecheck
-formula                             unbottled
-generate-cask-api                   unpack
-generate-formula-api                update-license-data
-generate-man-completions            update-maintainers
-install-bundler-gems                update-python-resources
-irb                                 update-sponsors
-linkage                             update-test
-livecheck                           vendor-gems
-pr-automerge
-
-==&gt; External commands
-services
-</code></pre></div>
-您可以使用 <code>brew help {command}</code> 指令来获取 <code>{command}</code> 的用法信息  </p>
+<h2 id="3">3. 常用指令</h2>
+<h4 id="_1">环境管理</h4>
+<ul>
+<li><code>conda create</code>：创建环境<ul>
+<li><code>-n {envName}</code>：必要指令，创建新的名为 <code>{envName}</code> 的环境，同 <code>--name</code></li>
+<li><code>-p {path}</code>：必要指令，创建路径为 <code>{path}</code> 且名字为 <code>{path}</code> 最子文件夹的环境，同 <code>--prosix</code> ，与 <code>-n</code> 不兼容</li>
+<li><code>{package}={ver}</code>：额外指令，指定新环境的 <code>{package}</code> 库版本为 <code>{ver}</code></li>
+<li><code>-c {envSourse}</code>：额外指令，在 <code>{envSourse}</code> 的基础上创建库，同 <code>--clone</code></li>
+<li>实例：<ul>
+<li><code>conda create -n new1</code></li>
+<li><code>conda create -n new2 python=3.11</code></li>
+<li><code>conda create -p "~\env\new3" numpy=1.8.0</code></li>
+<li><code>conda create -n new4 -c new3</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>conda activate {envName}</code>：进入名为 <code>{envName}</code> 的环境</li>
+<li><code>conda deactivate</code>：进入默认环境</li>
+<li><code>conda remove -n {envName} --all</code>：删除名为 <code>{envName}</code> 的环境</li>
+</ul>
+<h4 id="_2">库管理</h4>
+<ul>
+<li><code>conda list</code>：列举所属库<ul>
+<li><code>-n {envName}</code>：额外指令，列举名为 <code>{envName}</code> 的所属库</li>
+</ul>
+</li>
+<li><code>conda search {package}</code>：查找源是否有 <code>{package}</code> 库</li>
+<li><code>conda install {package}</code>：安装 <code>{package}</code> 库<ul>
+<li><code>={ver}</code>：额外指令（前无空格），指定 <code>{package}</code> 库版本为 <code>{ver}</code></li>
+</ul>
+</li>
+<li><code>conda update {package}</code>：更新 <code>{package}</code> 库</li>
+<li><code>conda uninstall {package}</code>：卸载 <code>{package}</code> 库</li>
+</ul>
 
 
 
