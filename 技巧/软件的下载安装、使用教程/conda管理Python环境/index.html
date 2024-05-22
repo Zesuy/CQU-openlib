@@ -5296,7 +5296,8 @@
 <ul>
 <li>类似 <code>{xxx}</code> 大括号内不以叹号 <code>!</code> 开头的是每个人不同的，您需要根据您的情况进行修改  </li>
 <li>类似 <code>{!xxx}</code> 大括号内以叹号 <code>!</code> 开头的是每个人不同的，但是无需修改，您只需要执行描述的操作即可  </li>
-<li>这是 <code>Python</code> 和 <code>Rust</code> 语言虚拟环境管理工具 <code>conda</code> 的部署教程，您可以使用该工具在同一台电脑下实现不同版本、安装不同库的 <code>Python</code> 隔离环境</li>
+<li>这是 <code>Python</code> 和 <code>Rust</code> 语言虚拟环境管理工具 <code>conda</code> 的部署教程，您可以使用该工具在同一台电脑下实现不同版本、安装不同库的 <code>Python</code> 隔离环境  </li>
+<li>本页面使用 <code>清华大学开源软件站</code> 驱动，您可自行更换软件源  </li>
 <li>前置知识  <ul>
 <li><a href="../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/%E5%88%A4%E6%96%AD%E6%82%A8%E7%9A%84%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%92%8C%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84/">判断您的操作系统和系统架构</a>  </li>
 <li><a href="../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%9F%BA%E7%A1%80/">命令行基础</a>  </li>
@@ -5305,10 +5306,10 @@
 </ul>
 <h2 id="1">1. 安装</h2>
 <ul>
-<li><code>Anaconda</code> 为更全面更丰富且带有图形化页面的 <code>conda</code> 版本，大约占用电脑 10 G 空间，<code>Miniconda</code> 为最简化仅带有基础命令行功能的 <code>conda</code> 版本，占用电脑大约 1 G 空间</li>
-<li>官方安装网站：<a href="https://www.anaconda.com/download/success">Anaconda</a>、<a href="https://docs.anaconda.com/free/miniconda/index.html">Miniconda</a></li>
-<li><a href="https://mirrors.tuna.tsinghua.edu.cn/">清华大学镜像站</a> - 右侧 <code>获取下载链接</code> - 上方 <code>应用软件</code> - <code>Conda</code> 选择您的操作系统和系统架构对应的安装包下载</li>
-<li>请按照指示进行进一步安装</li>
+<li><code>Anaconda</code> 为更全面更丰富且带有图形化页面的 <code>conda</code> 版本，大约占用电脑 10 G 空间，<code>Miniconda</code> 为最简化仅带有基础命令行功能的 <code>conda</code> 版本，占用电脑大约 1 G 空间  </li>
+<li>官方安装网站：<a href="https://www.anaconda.com/download/success">Anaconda</a>、<a href="https://docs.anaconda.com/free/miniconda/index.html">Miniconda</a>  </li>
+<li><a href="https://mirrors.tuna.tsinghua.edu.cn/">清华大学镜像站</a> - 右侧 <code>获取下载链接</code> - 上方 <code>应用软件</code> - <code>Conda</code> 选择您的操作系统和系统架构对应的安装包下载  </li>
+<li>请按照指示进行进一步安装  </li>
 </ul>
 <h2 id="2">2. 换源</h2>
 <p>请在命令行输入以下指令<br />
@@ -5320,42 +5321,41 @@ conda<span class="w"> </span>config<span class="w"> </span>--add<span class="w">
 conda<span class="w"> </span>config<span class="w"> </span>--add<span class="w"> </span>channels<span class="w"> </span>https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/pro
 conda<span class="w"> </span>config<span class="w"> </span>--add<span class="w"> </span>channels<span class="w"> </span>https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/msys2
 conda<span class="w"> </span>config<span class="w"> </span>--set<span class="w"> </span>show_channel_urls<span class="w"> </span>yes
-</code></pre></div>
-（本教程默认使用清华源，您可以使用其他镜像源，这里不做教程，请自行适配）  </p>
+</code></pre></div></p>
 <h2 id="3">3. 常用指令</h2>
 <h4 id="_1">环境管理</h4>
 <ul>
-<li><code>conda create</code>：创建环境<ul>
-<li><code>-n {envName}</code>：必要指令，创建新的名为 <code>{envName}</code> 的环境，同 <code>--name</code></li>
-<li><code>-p {path}</code>：必要指令，创建路径为 <code>{path}</code> 且名字为 <code>{path}</code> 最子文件夹的环境，同 <code>--prosix</code> ，与 <code>-n</code> 不兼容</li>
-<li><code>{package}={ver}</code>：额外指令，指定新环境的 <code>{package}</code> 库版本为 <code>{ver}</code></li>
-<li><code>-c {envSourse}</code>：额外指令，在 <code>{envSourse}</code> 的基础上创建库，同 <code>--clone</code></li>
-<li>实例：<ul>
-<li><code>conda create -n new1</code></li>
-<li><code>conda create -n new2 python=3.11</code></li>
-<li><code>conda create -p "~\env\new3" numpy=1.8.0</code></li>
-<li><code>conda create -n new4 -c new3</code></li>
+<li><code>conda create</code>：创建环境  <ul>
+<li><code>-n {envName}</code>：必要指令，创建新的名为 <code>{envName}</code> 的环境，同 <code>--name</code>  </li>
+<li><code>-p {path}</code>：必要指令，创建路径为 <code>{path}</code> 且名字为 <code>{path}</code> 最子文件夹的环境，同 <code>--prosix</code> ，与 <code>-n</code> 不兼容  </li>
+<li><code>{package}={ver}</code>：额外指令，指定新环境的 <code>{package}</code> 库版本为 <code>{ver}</code>  </li>
+<li><code>-c {envSourse}</code>：额外指令，在 <code>{envSourse}</code> 的基础上创建库，同 <code>--clone</code>  </li>
+<li>实例：  <ul>
+<li><code>conda create -n new1</code>  </li>
+<li><code>conda create -n new2 python=3.11</code>  </li>
+<li><code>conda create -p "~\env\new3" numpy=1.8.0</code>  </li>
+<li><code>conda create -n new4 -c new3</code>  </li>
 </ul>
 </li>
 </ul>
 </li>
-<li><code>conda activate {envName}</code>：进入名为 <code>{envName}</code> 的环境</li>
-<li><code>conda deactivate</code>：进入默认环境</li>
-<li><code>conda remove -n {envName} --all</code>：删除名为 <code>{envName}</code> 的环境</li>
+<li><code>conda activate {envName}</code>：进入名为 <code>{envName}</code> 的环境  </li>
+<li><code>conda deactivate</code>：进入默认环境  </li>
+<li><code>conda remove -n {envName} --all</code>：删除名为 <code>{envName}</code> 的环境  </li>
 </ul>
 <h4 id="_2">库管理</h4>
 <ul>
-<li><code>conda list</code>：列举所属库<ul>
-<li><code>-n {envName}</code>：额外指令，列举名为 <code>{envName}</code> 的所属库</li>
+<li><code>conda list</code>：列举所属库  <ul>
+<li><code>-n {envName}</code>：额外指令，列举名为 <code>{envName}</code> 的所属库  </li>
 </ul>
 </li>
-<li><code>conda search {package}</code>：查找源是否有 <code>{package}</code> 库</li>
-<li><code>conda install {package}</code>：安装 <code>{package}</code> 库<ul>
-<li><code>={ver}</code>：额外指令（前无空格），指定 <code>{package}</code> 库版本为 <code>{ver}</code></li>
+<li><code>conda search {package}</code>：查找源是否有 <code>{package}</code> 库  </li>
+<li><code>conda install {package}</code>：安装 <code>{package}</code> 库  <ul>
+<li><code>={ver}</code>：额外指令（前无空格），指定 <code>{package}</code> 库版本为 <code>{ver}</code>  </li>
 </ul>
 </li>
-<li><code>conda update {package}</code>：更新 <code>{package}</code> 库</li>
-<li><code>conda uninstall {package}</code>：卸载 <code>{package}</code> 库</li>
+<li><code>conda update {package}</code>：更新 <code>{package}</code> 库  </li>
+<li><code>conda uninstall {package}</code>：卸载 <code>{package}</code> 库  </li>
 </ul>
 
 

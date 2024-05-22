@@ -84,7 +84,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#2" class="md-skip">
+        <a href="#1" class="md-skip">
           跳转至
         </a>
       
@@ -3893,6 +3893,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. 判断操作系统
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#2" class="md-nav__link">
     <span class="md-ellipsis">
       2. 判断系统架构
@@ -5159,6 +5168,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. 判断操作系统
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#2" class="md-nav__link">
     <span class="md-ellipsis">
       2. 判断系统架构
@@ -5187,10 +5205,36 @@
 
   <h1>判断您的操作系统和系统架构</h1>
 
+<h2 id="1">1. 判断操作系统</h2>
+<ul>
+<li>大多数人的电脑（除苹果电脑外）是 <code>Windows</code> 系统<ul>
+<li>包括：<code>Win 7</code>、<code>Win 10</code>、<code>Win 11</code> 等</li>
+<li>特征：左下方含有 <code>Windows</code> 按钮（即四个方形组成的图案）</li>
+</ul>
+</li>
+<li>如果您的电脑为苹果电脑，即 <code>Macbook</code>、<code>Macmini</code> 或 <code>Mac Studio</code>，您的电脑是 <code>MacOS</code> 系统<ul>
+<li>包括：<code>Catalina</code>、<code>Big Sur</code>、<code>Monterey</code> 等</li>
+<li>特征：左上方含有 <code>Apple</code> 按钮（即苹果公司logo）</li>
+</ul>
+</li>
+<li>其余的电脑绝大部分为 <code>Linux</code> 系统<ul>
+<li>包括 <code>Ubuntu</code>、<code>CentOS</code>、<code>Deepin</code> 等</li>
+</ul>
+</li>
+</ul>
 <h2 id="2">2. 判断系统架构</h2>
 <ul>
+<li>Windows<ul>
+<li>您可以在 <code>设置</code>-<code>系统</code>-<code>系统信息</code>-<code>系统类型</code> 处找到您电脑的系统架构<ul>
+<li><code>64 位操作系统, 基于 x64 的处理器</code> 对应的是 <code>64-bit</code> 版本</li>
+<li><code>32 位操作系统, 基于 x86 的处理器</code> 对应的是 <code>32-bit</code> 版本</li>
+<li><code>64 位操作系统, 基于 ARM 的处理器</code> 对应的是 <code>ARM64</code> 版本</li>
+</ul>
+</li>
+</ul>
+</li>
 <li>MacOS<ul>
-<li>请使用指令 <code>uname -m</code> 来获取您的 <code>系统架构</code>  </li>
+<li>请在命令行使用指令 <code>uname -m</code> 来获取您的 <code>系统架构</code>  </li>
 </ul>
 </li>
 </ul>
